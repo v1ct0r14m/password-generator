@@ -88,7 +88,7 @@ header {
 
 button[disabled] {
   cursor: default;
-  background: #c0c7cf;
+  background: #2c63a1;
 }
 
 .float-right {
@@ -117,6 +117,7 @@ button[disabled] {
   resize: none;
   overflow: hidden;
 }
+
 
 @media (max-width: 690px) {
   .btn {
