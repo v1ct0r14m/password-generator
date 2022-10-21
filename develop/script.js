@@ -1,11 +1,19 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-// client wants to use following: pwdCriteria
+// criteria variables
+
 var lower = 'abcdefghijklmnopqrstuvwxyz';
-var uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+var upper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 var special =  '~!@#$%^&*-=+_.?';
 var randomNum = Math.floor(Math.random);
+
+// chosen variables --> true
+
+var lowerChosen = true;
+var upperChosen = true;
+var specialChosen = true;
+var randomNumChosen = true;
 
 // Write password to the #password input
 function writePassword() {
@@ -25,14 +33,24 @@ generateBtn.addEventListener("click", writePassword);
 //to carry out operations for password generator
 function generatePassword() {
 
+  var result = '';
+
   pwdLength = 0;
   lower = '';
   upper = '';
   special = '';
+  randomNum = '';
+  result = '';
 
   while (pwdLength > 8 || pwdLength < 128) {
-    pwdLength = prompt('how many characters would you like your password to be? (password must be at least 8 characters)');
+    pwdLength = window.prompt('how many characters would you like your password to be? (password must be at least 8 characters)');
 
+    // if cancel is pressed
+    if (pwdLength === null) {
+      return 'your secure password';
+    }
+
+    // if < 8 & > 128 characters are put
     if (pwdLength < 8 || pwdLength > 128) {
 
       alert('password does not meet length criteria');
@@ -40,15 +58,25 @@ function generatePassword() {
       return generatePassword;
     }
     else {
-      
-      return true;
+
+
+      while (pwdLength = true) {
+  
+
+        lowerChosen = confirm('would you like to use lowercase characters?')
+        upperChosen = confirm('would you like to use uppercase characters?')
+        specialChosen = confirm('would you like to use special characters?')
+        randomNum = confirm('would you like to use random numbers?')
+
+        
+
+        }
+        }
+
+      }
     }
   
-  
-  
-  }
 
-}
 
 
 
