@@ -90,7 +90,7 @@ function generatePassword() {
             var lower = pwdGenerated.lowercase[Math.floor(Math.random() * 26)]
             result = result + lower;
 
-            pwdGenerated.passwordLength++;
+            pwdGenerated.passwordLength;
 
           }
 
