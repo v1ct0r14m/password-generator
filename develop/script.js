@@ -3,13 +3,15 @@ var generateBtn = document.querySelector("#generate");
 
 // criteria variables
 
-var pwdGenerated = {lowercase, uppercase, specialChar, randomNum, passwordLength}
 
 var lowercase = 'abcdefghijklmnopqrstuvwxyz';
 var uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 var specialChar =  '~!@#$%^&*-=+_.?';
-var randomNum = Math.floor(Math.random);
+var randomNum = '0123456789';
 var passwordLength = 0;
+
+
+var pwdGenerated = {lowercase, uppercase, specialChar, randomNum, passwordLength}
 
 function runPrompts() {
   
@@ -48,10 +50,6 @@ function generatePassword() {
 
   pwdLength = 0;
   pwdGenerated.passwordLength = 0;
-  lowercase = '';
-  uppercase = '';
-  specialChar = '';
-  random = '';
   result = '';
 
   while (pwdLength > 8 || pwdLength < 128) {
@@ -88,35 +86,35 @@ function generatePassword() {
           
       
           if (lowercase === true && pwdGenerated.passwordLength < pwdLength) {
-            var lower = pwdGenerated.lowercase;
+            var lower = pwdGenerated.lowercase[Math.floor(Math.random() * 26)]
             result = result + lower;
 
-            pwdGenerated.passwordLength++;
+            pwdGenerated.passwordLength;
 
           }
 
       
           if (uppercase === true && pwdGenerated.passwordLength < pwdLength) {
-            var upper = pwdGenerated.uppercase;
+            var upper = pwdGenerated.uppercase[Math.floor(Math.random() * 26)]
             result = result + upper;
 
-            pwdGenerated.passwordLength++;
+            pwdGenerated.passwordLength;
         
           }
 
           if (specialChar === true && pwdGenerated.passwordLength < pwdLength) {
-            var special = pwdGenerated.specialChar;
+            var special = pwdGenerated.specialChar[Math.floor(Math.random() * 15)]
             result = result + special;
 
-            pwdGenerated.passwordLength++;
+            pwdGenerated.passwordLength;
 
           }
 
           if (randomNum === true && pwdGenerated.passwordLength < pwdLength) {
-            var random = pwdGenerated.random;
+            var random = pwdGenerated.randomNum[Math.floor(Math.random() * 10)];
             result = result + random;
 
-            pwdGenerated.passwordLength++;
+            pwdGenerated.passwordLength;
           }
 
         } 
@@ -134,14 +132,8 @@ function generatePassword() {
 
 
 
-  
-////while loop here --> while characters are between 8 - 128
-//// pwdLength, #, symbols, upper n lower case letters decided by user input here
-//////prompts for each 
-//////all prompts to be answerable
 
-
-/* p must be at least 8 characters and no more than 128 characters --> MOVED TO GENERATEPWD
+/* pwd must be at least 8 characters and no more than 128 characters --> MOVED TO GENERATEPWD
 
   while loop for pwdLength -->
   prompt for pwdLength-->for length input
