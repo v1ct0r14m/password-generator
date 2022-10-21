@@ -11,6 +11,15 @@ var specialChar =  '~!@#$%^&*-=+_.?';
 var randomNum = Math.floor(Math.random);
 var passwordLength = 0;
 
+function runPrompts() {
+  
+
+  lowercase = confirm('would you like to use lowercase characters?')
+  uppercase = confirm('would you like to use uppercase characters?')
+  specialChar = confirm('would you like to use special characters?')
+  randomNum = confirm('would you like to use random numbers?')
+
+} 
 // Write password to the #password input
 function writePassword() {
 
@@ -35,12 +44,6 @@ function generatePassword() {
   // variables for user prompts
   var pwdLength = 0;
 
-  // chosen variables --> true
-  var lowerChosen = true;
-  var upperChosen = true;
-  var specialChosen = true;
-  var randomNumChosen = true;
-
     pwdLength = 0;
     pwdGenerated.pwdLength = 0;
     lowercase = '';
@@ -52,93 +55,80 @@ function generatePassword() {
     while (pwdLength > 8 || pwdLength < 128) {
     pwdLength = window.prompt('how many characters would you like your password to be? (password must be at least 8 characters)');
 
-    // if cancel is pressed
-    if (pwdLength === null) {
-      return 'your secure password';
-    }
-    // if < 8 & > 128 characters are put
-    if (pwdLength < 8 || pwdLength > 128) {
+      // if cancel is pressed
+      if (pwdLength === null) {
+        return 'your secure password';
+      }
+      // if < 8 & > 128 characters are put
+      if (pwdLength < 8 || pwdLength > 128) {
 
-      alert('password does not meet length criteria');
+        alert('password does not meet length criteria');
       
-      return 'your secure password';
-    }
-
-        else { 
-          
-
-          while (passwordLength < pwdLength) { 
-          
-            runPrompts();
-
-          }
-        
-
-          if (lowerChosen === true && pwdGenerated.passwordLength === true) {
-            var lower = pwdGenerated.lowercase[Math.floor(Math.random)]
-            result = result + lower;
-
-            return result;
-          }
-
-        
-
-          if (upperChosen === true && pwdGenerated.pwdLength === true) {
-            var upper = pwdGenerated.uppercase[Math.floor(Math.random)]
-            result = result + upper;
-
-            return result;
-        
-          }
-
-          if (specialChosen === true && pwdGenerated.pwdLength === true) {
-            var special = pwdGenerated.specialChar[Math.floor(Math.random)]
-            result = result + special;
-
-           return result;
-
-
-          }
-
-          if (randomNumChosen === true && pwdGenerated.pwdLength === true) {
-            var random = pwdGenerated.random[Math.floor(Math.random)]
-            result = result + random;
-
-           return result;
-          }
-          else {
-
-            if (lowerChosen === false
-              && upperChosen === false
-              && specialChosen === false 
-              && randomNum === false) {
-      
-              window.alert('you must choose at least one of the criteria to generate a password')
-      
-              runPrompts();
-            }
-          }
-
-        }
-        
+        return 'your secure password';
       }
 
-    }
+        else { runPrompts();
+          
+
+          while (passwordLength < pwdLength) {
+            
+          if (lowercase === false && uppercase === false && specialChar === false && randomNum === false) {
+            alert('at least one criteria must be selected to generate a password')
+
+            runPrompts();
+          } 
+          else { 
+            
+          
+      
+          if (lowercase === true && passwordLength < pwdLength) {
+            var lower = pwdGenerated.lowercase;
+            result = result + lower;
+
+            pwdGenerated.passwordLength++;
+
+          }
 
       
-    function runPrompts() {
+          if (uppercase === true && passwordLength < pwdLength) {
+            var upper = pwdGenerated.uppercase;
+            result = result + upper;
+
+            pwdGenerated.passwordLength++;
+        
+          }
+
+          if (specialChar === true && passwordLength < pwdLength) {
+            var special = pwdGenerated.specialChar;
+            result = result + special;
+
+            pwdGenerated.passwordLength++;
+
+          }
+
+          if (randomNum === true && passwordLength < pwdLength) {
+            var random = pwdGenerated.random;
+            result = result + random;
+
+            pwdGenerated.passwordLength++;
+
+          }
+        }
+      }
+
+      }
+
+    
+
+    }    
+  return result;
+}
+
+      
+
+
+
   
-
-    lowerChosen = confirm('would you like to use lowercase characters?')
-    upperChosen = confirm('would you like to use uppercase characters?')
-    specialChosen = confirm('would you like to use special characters?')
-    randomNumChosen = confirm('would you like to use random numbers?')
-  }
-
-
-
-
-
 ////while loop here --> while characters are between 8 - 128
 //// pwdLength, #, symbols, upper n lower case letters decided by user input here
 //////prompts for each 
