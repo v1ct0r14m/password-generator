@@ -8,10 +8,10 @@ var lowercase = 'abcdefghijklmnopqrstuvwxyz';
 var uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 var specialChar =  '~!@#$%^&*-=+_.?';
 var randomNum = '0123456789';
-var passwordLength = 0;
+var passwordLength = { passwordLength: 0 }
 
 
-var pwdGenerated = {lowercase, uppercase, specialChar, randomNum, passwordLength}
+
 
 function runPrompts() {
   
@@ -21,7 +21,10 @@ function runPrompts() {
   specialChar = confirm('would you like to use special characters?')
   randomNum = confirm('would you like to use random numbers?')
 
-} 
+}
+
+var pwdGenerated = {lowercase, uppercase, specialChar, randomNum}
+
 // Write password to the #password input
 function writePassword() {
 
@@ -40,8 +43,6 @@ generateBtn.addEventListener("click", writePassword);
 //to carry out operations for password generator
 function generatePassword() {
 
-  
-
   //holds result until return result
   var result = '';
 
@@ -49,7 +50,7 @@ function generatePassword() {
   var pwdLength = 0;
 
   pwdLength = 0;
-  pwdGenerated.passwordLength = 0;
+  passwordLength.passwordLength = 0;
   result = '';
 
   while (pwdLength > 8 || pwdLength < 128) {
@@ -73,7 +74,7 @@ function generatePassword() {
         runPrompts();
         
 
-        while (passwordLength < pwdLength) {
+        while (passwordLength.passwordLength < pwdLength) {
           
         if (lowercase === false && uppercase === false && specialChar === false && randomNum === false) {
           alert('at least one criteria must be selected to generate a password')
@@ -85,40 +86,40 @@ function generatePassword() {
             
           
       
-          if (lowercase === true && pwdGenerated.passwordLength < pwdLength) {
+          if (lowercase === true && passwordLength.passwordLength < pwdLength) {
 
             var lower = pwdGenerated.lowercase[Math.floor(Math.random() * 26)]
             result = result + lower;
 
-            pwdGenerated.passwordLength;
+            pwdGenerated.passwordLength++;
 
           }
 
       
-          if (uppercase === true && pwdGenerated.passwordLength < pwdLength) {
+          if (uppercase === true && passwordLength.passwordLength < pwdLength) {
 
             var upper = pwdGenerated.uppercase[Math.floor(Math.random() * 26)]
             result = result + upper;
 
-            pwdGenerated.passwordLength;
+            pwdGenerated.passwordLength++;
         
           }
 
-          if (specialChar === true && pwdGenerated.passwordLength < pwdLength) {
+          if (specialChar === true && passwordLength.passwordLength < pwdLength) {
 
             var special = pwdGenerated.specialChar[Math.floor(Math.random() * 15)]
             result = result + special;
 
-            pwdGenerated.passwordLength;
+            pwdGenerated.passwordLength++;
 
           }
 
-          if (randomNum === true && pwdGenerated.passwordLength < pwdLength) {
+          if (randomNum === true && passwordLength.passwordLength < pwdLength) {
 
             var random = pwdGenerated.randomNum[Math.floor(Math.random() * 10)];
             result = result + random;
 
-            pwdGenerated.passwordLength;
+            pwdGenerated.passwordLength++;
           }
 
         } 
