@@ -86,15 +86,17 @@ function generatePassword() {
           
       
           if (lowercase === true && pwdGenerated.passwordLength < pwdLength) {
+
             var lower = pwdGenerated.lowercase[Math.floor(Math.random() * 26)]
             result = result + lower;
 
-            pwdGenerated.passwordLength;
+            pwdGenerated.passwordLength++;
 
           }
 
       
           if (uppercase === true && pwdGenerated.passwordLength < pwdLength) {
+
             var upper = pwdGenerated.uppercase[Math.floor(Math.random() * 26)]
             result = result + upper;
 
@@ -103,6 +105,7 @@ function generatePassword() {
           }
 
           if (specialChar === true && pwdGenerated.passwordLength < pwdLength) {
+
             var special = pwdGenerated.specialChar[Math.floor(Math.random() * 15)]
             result = result + special;
 
@@ -111,6 +114,7 @@ function generatePassword() {
           }
 
           if (randomNum === true && pwdGenerated.passwordLength < pwdLength) {
+
             var random = pwdGenerated.randomNum[Math.floor(Math.random() * 10)];
             result = result + random;
 
