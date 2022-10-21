@@ -23,7 +23,12 @@ function runPrompts() {
 
 }
 
-var pwdGenerated = {lowercase, uppercase, specialChar, randomNum, passwordLength}
+var pwdGenerated = {
+  lowercase: '',
+  uppercase: '',
+  specialChar: '',
+  randomNum: '',
+  passwordLength}
 
 // Write password to the #password input
 function writePassword() {
@@ -53,7 +58,9 @@ function generatePassword() {
   passwordLength.passwordLength = 0;
   result = '';
 
-  while (pwdLength > 8 || pwdLength < 128) {
+  
+
+  while ((pwdLength) || pwdLength > 8 || pwdLength < 128) {
 
     pwdLength = window.prompt('how many characters would you like your password to be? (password must be at least 8 characters)');
 
@@ -122,7 +129,8 @@ function generatePassword() {
             pwdGenerated.passwordLength++;
           }
 
-          return pwdGenerated;
+
+          return pwdGenerated.passwordLength++;
 
         } 
         
