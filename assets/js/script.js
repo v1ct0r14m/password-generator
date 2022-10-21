@@ -23,7 +23,7 @@ function runPrompts() {
 
 }
 
-var pwdGenerated = {lowercase, uppercase, specialChar, randomNum}
+var pwdGenerated = {lowercase, uppercase, specialChar, randomNum, passwordLength}
 
 // Write password to the #password input
 function writePassword() {
@@ -86,7 +86,7 @@ function generatePassword() {
             
           
       
-          if (lowercase === true && passwordLength.passwordLength < pwdLength) {
+          if (lowercase === true && pwdGenerated.passwordLength < pwdLength) {
 
             var lower = pwdGenerated.lowercase[Math.floor(Math.random() * 26)]
             result = result + lower;
@@ -96,7 +96,7 @@ function generatePassword() {
           }
 
       
-          if (uppercase === true && passwordLength.passwordLength < pwdLength) {
+          if (uppercase === true && pwdGenerated.passwordLength < pwdLength) {
 
             var upper = pwdGenerated.uppercase[Math.floor(Math.random() * 26)]
             result = result + upper;
@@ -105,7 +105,7 @@ function generatePassword() {
         
           }
 
-          if (specialChar === true && passwordLength.passwordLength < pwdLength) {
+          if (specialChar === true && pwdGenerated.passwordLength < pwdLength) {
 
             var special = pwdGenerated.specialChar[Math.floor(Math.random() * 15)]
             result = result + special;
@@ -114,7 +114,7 @@ function generatePassword() {
 
           }
 
-          if (randomNum === true && passwordLength.passwordLength < pwdLength) {
+          if (randomNum === true && pwdGenerated.passwordLength < pwdLength) {
 
             var random = pwdGenerated.randomNum[Math.floor(Math.random() * 10)];
             result = result + random;
@@ -122,9 +122,11 @@ function generatePassword() {
             pwdGenerated.passwordLength++;
           }
 
+          return pwdGenerated;
+
         } 
         
-        return result;
+      
           
       }
     }
