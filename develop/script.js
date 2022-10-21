@@ -3,17 +3,13 @@ var generateBtn = document.querySelector("#generate");
 
 // criteria variables
 
-var lower = 'abcdefghijklmnopqrstuvwxyz';
-var upper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-var special =  '~!@#$%^&*-=+_.?';
+var pwdGenerated = {lowercase, uppercase, specialChar, randomNum, passwordLength}
+
+var lowercase = 'abcdefghijklmnopqrstuvwxyz';
+var uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+var specialChar =  '~!@#$%^&*-=+_.?';
 var randomNum = Math.floor(Math.random);
-
-// chosen variables --> true
-
-var lowerChosen = true;
-var upperChosen = true;
-var specialChosen = true;
-var randomNumChosen = true;
+var passwordLength = 0;
 
 // Write password to the #password input
 function writePassword() {
@@ -33,49 +29,112 @@ generateBtn.addEventListener("click", writePassword);
 //to carry out operations for password generator
 function generatePassword() {
 
+  //holds result until return result
   var result = '';
 
-  pwdLength = 0;
-  lower = '';
-  upper = '';
-  special = '';
-  randomNum = '';
-  result = '';
+  // variables for user prompts
+  var pwdLength = 0;
 
-  while (pwdLength > 8 || pwdLength < 128) {
+  // chosen variables --> true
+  var lowerChosen = true;
+  var upperChosen = true;
+  var specialChosen = true;
+  var randomNumChosen = true;
+
+    pwdLength = 0;
+    pwdGenerated.pwdLength = 0;
+    lowercase = '';
+    uppercase = '';
+    specialChar = '';
+    random = '';
+    result = '';
+
+    while (pwdLength > 8 || pwdLength < 128) {
     pwdLength = window.prompt('how many characters would you like your password to be? (password must be at least 8 characters)');
 
     // if cancel is pressed
     if (pwdLength === null) {
       return 'your secure password';
     }
-
     // if < 8 & > 128 characters are put
     if (pwdLength < 8 || pwdLength > 128) {
 
       alert('password does not meet length criteria');
       
-      return generatePassword;
+      return 'your secure password';
     }
-    else {
 
+        else { 
+          
 
-      while (pwdLength = true) {
-  
+          while (passwordLength < pwdLength) { 
+          
+            runPrompts();
 
-        lowerChosen = confirm('would you like to use lowercase characters?')
-        upperChosen = confirm('would you like to use uppercase characters?')
-        specialChosen = confirm('would you like to use special characters?')
-        randomNum = confirm('would you like to use random numbers?')
+          }
+        
+
+          if (lowerChosen === true && pwdGenerated.passwordLength === true) {
+            var lower = pwdGenerated.lowercase[Math.floor(Math.random)]
+            result = result + lower;
+
+            return result;
+          }
 
         
 
-        }
-        }
+          if (upperChosen === true && pwdGenerated.pwdLength === true) {
+            var upper = pwdGenerated.uppercase[Math.floor(Math.random)]
+            result = result + upper;
 
+            return result;
+        
+          }
+
+          if (specialChosen === true && pwdGenerated.pwdLength === true) {
+            var special = pwdGenerated.specialChar[Math.floor(Math.random)]
+            result = result + special;
+
+           return result;
+
+
+          }
+
+          if (randomNumChosen === true && pwdGenerated.pwdLength === true) {
+            var random = pwdGenerated.random[Math.floor(Math.random)]
+            result = result + random;
+
+           return result;
+          }
+          else {
+
+            if (lowerChosen === false
+              && upperChosen === false
+              && specialChosen === false 
+              && randomNum === false) {
+      
+              window.alert('you must choose at least one of the criteria to generate a password')
+      
+              runPrompts();
+            }
+          }
+
+        }
+        
       }
+
     }
+
+      
+    function runPrompts() {
   
+
+    lowerChosen = confirm('would you like to use lowercase characters?')
+    upperChosen = confirm('would you like to use uppercase characters?')
+    specialChosen = confirm('would you like to use special characters?')
+    randomNumChosen = confirm('would you like to use random numbers?')
+  }
+
 
 
 
