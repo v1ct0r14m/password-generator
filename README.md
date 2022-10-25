@@ -1,15 +1,8 @@
 # 03 JavaScript: Password Generator
 
-following through the pre-work, the items in this repository will be contained to guide as i learn as student developer.
-
 ## Description
 
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
-
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
+This project served to fulfill the user story which requested a password generator that enables one to generate a random, secure password utilizing various criteria so long as the password is between 8 to 124 characters long, usingg lowercase, uppercase, and special characters, as well as numbers. These days, advancements in technology has enabled incredible connections to be made, but some are advantageous and hack various accounts rather than utilize their skillz for betterment. This is an attempt to combat that. In order to aid in providing more security to innocent people that just want to partake in the connectivity of the interweb, this generator will produce a completely random password, one of infinite possibilities. The randomness acts as a defense, enabling the user to generate a password that does not link to any personal aspects of their lives which could provide possiblity for hacking. Here I learned how to create variables, functions, methods, and loops, as well as control flow and understanding boolean objects.
 
 ## Table of Contents (Optional)
 
@@ -22,7 +15,7 @@ If your README is long, add a table of contents to make it easy for users to fin
 
 ## Installation
 
-What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
+In order to run the application, (at this moment) simply launch the application from the deployment link, and the site should open in the next tab of the browser you are using.
 
 ## Usage
 
