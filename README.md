@@ -2,7 +2,7 @@
 
 ## Description
 
-This project served to fulfill the user story which requested a password generator that enables one to generate a random, secure password utilizing various criteria so long as the password is between 8 to 128 characters long, usingg lowercase, uppercase, and special characters, as well as numbers. These days, advancements in technology has enabled incredible connections to be made, but some are advantageous and hack various accounts rather than utilize their skillz for betterment. This is an attempt to combat that. In order to aid in providing more security to innocent people that just want to partake in the connectivity of the interweb, this generator will produce a completely random password, one of infinite possibilities. The randomness acts as a defense, enabling the user to generate a password that does not link to any personal aspects of their lives which could provide possiblity for hacking. Here I learned how to create variables, functions, methods, and loops, as well as control flow and understanding boolean objects.
+This project served to fulfill the user story which requested a password generator that enables one to generate a random, secure password utilizing various criteria so long as the password is between 8 to 128 characters long, using lowercase, uppercase, and special characters, as well as numbers. These days, advancements in technology has enabled incredible connections to be made, but some are advantageous and hack various accounts rather than utilize their skillz for betterment. This is an attempt to combat that. In order to aid in providing more security to innocent people that just want to partake in the connectivity of the interweb, this generator will produce a completely random password, one of infinite possibilities. The randomness acts as a defense, enabling the user to generate a password that does not link to any personal aspects of their lives which could provide possiblity for hacking. Here I learned how to create variables, functions, methods, and loops, as well as control flow and understanding boolean objects.
 
 ## Installation
 
@@ -21,7 +21,7 @@ Once the user is on the application, the are presented with a 'generate password
 ![app prompt5](assets/images/ex7.png)
 ![app NaN](assets/images/ex8.png)
 
-If one looks at the git repository and looks through the commits, I would have varying results, two of them being so close yet so far to a full functioning application. One outcome would give me randomized characters and number, but only 4 despit entering 12. The other outcome spits out a "NaN." I understand that I am close, but before I push more changes, I'd like a formal evaluation of the standing of the app as it is. I also changed the styling of the page so it would be easier on the eyes and screen.
+If one looks at the git repository and looks through the commits, I would have varying results: two of them being so close yet so far to a full functioning application. One outcome would give me randomized characters and number, but only 4 despit entering 12. The other outcome spits out a "NaN." I understand that I am close, but before I push more changes, I'd like a formal evaluation of the standing of the app as it is- especially because I need to move things along on my part. I also changed the styling of the page so it would be easier on the eyes and screen.
 
 ## Credits
 
