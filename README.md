@@ -21,13 +21,14 @@ Once the user is on the application, the are presented with a 'generate password
 ![app prompt5](assets/images/ex7.png)
 ![app NaN](assets/images/ex8.png)
 
-If one looks at the git repository and looks through the commits, I would have varying results: two of them being so close, yet so far from a full functioning application. One outcome would give me randomized characters and number, but only 4 despite entering 12. The other outcome spits out a "NaN." I understand that I am close, but before I push more changes, I'd like a formal evaluation of the standing of the app as it is, like a bird's eye view- especially because I need to move things along on my part. I also changed the styling of the page so it would be easier on the eyes and screen.
+If one looks at the git repository and looks through the commits, I would have varying results: two of them being so close, yet so far from a full functioning application. One outcome would give me randomized characters and number, but only 4 despite entering 12. The other outcome spits out a "NaN." I understand that I am close, but before I push more changes, I'd like a formal evaluation of the standing of the app as it is, like a bird's eye view- especially because I need to move things along on my part. I've been jumping back and forth to piece together the information needed to continue forward, and I'd like to give a big shoutout to Slavic for his great walkthroughs because there are so clear and straight-forward, any misunderstanding is typically something nuanced or innately complex and just needs more time to resonate. With that, I also changed the styling of the page so it would be easier on the eyes and screen (a personal preference).
 
 ## Credits
 
 Random Password Generator in JavaScript by Daniel Vega: https://www.youtube.com/watch?v=v2jfGo7ztm8
 
 My Robot Gladiators Repo: https://github.com/v1ct0r14m/robot-gladiators (not sure if we must add an activity from class, but the walkthrough and format of the files were extremely helpful in building this application)
+
 
 ## License
 
