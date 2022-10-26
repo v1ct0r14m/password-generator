@@ -2,16 +2,7 @@
 
 ## Description
 
-This project served to fulfill the user story which requested a password generator that enables one to generate a random, secure password utilizing various criteria so long as the password is between 8 to 124 characters long, usingg lowercase, uppercase, and special characters, as well as numbers. These days, advancements in technology has enabled incredible connections to be made, but some are advantageous and hack various accounts rather than utilize their skillz for betterment. This is an attempt to combat that. In order to aid in providing more security to innocent people that just want to partake in the connectivity of the interweb, this generator will produce a completely random password, one of infinite possibilities. The randomness acts as a defense, enabling the user to generate a password that does not link to any personal aspects of their lives which could provide possiblity for hacking. Here I learned how to create variables, functions, methods, and loops, as well as control flow and understanding boolean objects.
-
-## Table of Contents (Optional)
-
-If your README is long, add a table of contents to make it easy for users to find what they need.
-
-- [Installation](#installation)
-- [Usage](#usage)
-- [Credits](#credits)
-- [License](#license)
+This project served to fulfill the user story which requested a password generator that enables one to generate a random, secure password utilizing various criteria so long as the password is between 8 to 128 characters long, usingg lowercase, uppercase, and special characters, as well as numbers. These days, advancements in technology has enabled incredible connections to be made, but some are advantageous and hack various accounts rather than utilize their skillz for betterment. This is an attempt to combat that. In order to aid in providing more security to innocent people that just want to partake in the connectivity of the interweb, this generator will produce a completely random password, one of infinite possibilities. The randomness acts as a defense, enabling the user to generate a password that does not link to any personal aspects of their lives which could provide possiblity for hacking. Here I learned how to create variables, functions, methods, and loops, as well as control flow and understanding boolean objects.
 
 ## Installation
 
@@ -19,42 +10,25 @@ In order to run the application, (at this moment) simply launch the application 
 
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
+Once the user is on the application, the are presented with a 'generate password' button. The user will click the 'generate password' button and be presented with a set of prompts that ask how many characters they'd like to use, along with lowercase, uppercase, and special characters, plus the option to add a random number. 
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative file path, add it to your README using the following syntax:
+![app start](assets/images/ex1.png)
+![app prompt1](assets/images/ex2.png)
+![app insert1](assets/images/ex3.png)
+![app prompt2](assets/images/ex4.png)
+![app prompt3](assets/images/ex5.png)
+![app prompt4](assets/images/ex6.png)
+![app prompt5](assets/images/ex7.png)
+![app NaN](assets/images/ex8.png)
 
-![alt text](assets/images/screenshot.png)
+If one looks at the git repository and looks through the commits, I would have varying results, two of them being so close yet so far to a full functioning application. One outcome would give me randomized characters and number, but only 4 despit entering 12. The other outcome spits out a "NaN." I understand that I am close, but before I push more changes, I'd like a formal evaluation of the standing of the app as it is. I also changed the styling of the page so it would be easier on the eyes and screen.
 
 ## Credits
 
-List your collaborators, if any, with links to their GitHub profiles.
+Random Password Generator in JavaScript by Daniel Vega: https://www.youtube.com/watch?v=v2jfGo7ztm8
 
-If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
-
-If you followed tutorials, include links to those here as well.
+My Robot Gladiators Repo: https://github.com/v1ct0r14m/robot-gladiators (not sure if we must add an activity from class, but the walkthrough and format of the files were extremely helpful in building this application)
 
 ## License
 
-The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
-
----
-
-🏆 The previous sections are the bare minimum, and your project will ultimately determine the content of this document. You might also want to consider adding the following sections.
-
-## Badges
-
-![badmath](https://img.shields.io/github/languages/top/nielsenjared/badmath)
-
-Badges aren't necessary, but they demonstrate street cred. Badges let other developers know that you know what you're doing. Check out the badges hosted by [shields.io](https://shields.io/). You may not understand what they all represent now, but you will in time.
-
-## Features
-
-If your project has a lot of features, list them here.
-
-## How to Contribute
-
-If you created an application or package and would like other developers to contribute to it, you can include guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own if you'd prefer.
-
-## Tests
-
-Go the extra mile and write tests for your application. Then provide examples on how to run them here.
+No license.
